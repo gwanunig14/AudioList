@@ -10,6 +10,8 @@
 
 #import "ALAiPadViewController.h"
 
+#import "ALAiPhoneTableView.h"
+
 @implementation ALAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -25,7 +27,7 @@
         self.window.rootViewController = splitVC;
         
     }else{
-        UITableViewController * tvc = [[UITableViewController alloc]initWithStyle:UITableViewStylePlain];
+        ALAiPhoneTableView * tvc = [[ALAiPhoneTableView alloc]initWithStyle:UITableViewStylePlain];
         [nc pushViewController:tvc animated:YES];
         self.window.rootViewController = nc;
     }
